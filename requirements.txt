@@ -1,0 +1,7 @@
+deep-translator==1.11.1
+pysubs2==1.6.1
+<<<<<<< HEAD
+PyGObject==3.44.1
+=======
+PyGObject==3.44.1
+>>>>>>> 4745a11 (f)

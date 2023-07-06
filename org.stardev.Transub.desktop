@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Transub
+Exec=runner.sh
+Type=Application
+Icon=org.stardev.Transub

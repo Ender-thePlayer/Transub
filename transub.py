@@ -352,16 +352,6 @@ def on_size_allocate(widget, allocation):
 def replace_newlines_with_spaces(text):
     return re.sub(r'\\N', r'\\N ', text)
 
-def on_response(self, dialog, response):
-    if response == Gtk.ResponseType.OK:
-        print("OK button clicked")
-    elif response == Gtk.ResponseType.CANCEL:
-        print("Cancel button clicked")
-    else:
-        print("Dialog closed")
-
-    dialog.destroy()
-
 win = EntryWindow()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()

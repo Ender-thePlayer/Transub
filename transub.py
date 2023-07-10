@@ -13,7 +13,7 @@ from gi.repository import Gtk, GLib, GdkPixbuf
 from threading import Thread
 from deep_translator import GoogleTranslator
 
-version = "beta_1.2.1"
+version = "beta_1.2.2b"
 
 config_dir = os.path.join(os.environ.get('XDG_CONFIG_HOME'), 'transub')
 config_file = os.path.join(config_dir, 'config.json')
@@ -63,8 +63,8 @@ class EntryWindow(Gtk.Window):
         headerbar.set_show_close_button(True)
         self.set_titlebar(headerbar)
 
-        button = Gtk.Button(label="About")
-        button.connect("clicked", on_about_button_clicked)
+        button = Gtk.Button(label="Settings")
+        button.connect("clicked", on_settings_button_clicked)
         headerbar.pack_end(button)
 
         mainbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
@@ -229,10 +229,10 @@ class EntryWindow(Gtk.Window):
             textbuffer.insert(end_iter, f"\nCannot transalte, Error while tranlsating: {e}.\n")
 
 
-##The about dialog window 
-def on_about_button_clicked(button):
+##The settings dialog window 
+def on_settings_button_clicked(button):
     dialog = Gtk.Dialog(
-        title="About Transub",
+        title="Transub Settings",
         transient_for=None,
         flags=0,
     )

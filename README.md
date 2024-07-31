@@ -15,6 +15,11 @@ sudo apt-get install flatpak-builder
 sudo dnf install flatpak-builder
 ```
 
+## ArchLinux
+```bash
+sudo pacman -S flatpak-builder
+```
+
 
 
 # Build And Install the app
